@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% load i18n static %}
+
+{% block title %} Log analyzer {% endblock %}
+
+{% block content %}
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page"><a href="/">Main</a></li>
+  </ol>
+</nav>
+
+<div class="row" >
+  <div class="col" >
+
+<div class="card mh-65" >
+   <div class="card-body">
+     <div class="card-title">Log analyze parameters</div>
+
+     <form> {% csrf_token %}
+   <div class="form-group">
+    <textarea class="form-control" id="logText" rows="18">{{default_log}}</textarea>
+   </div>
+    <button class="btn btn-primary" onClick="callLogAPI(); return false;">Submit</button>
+     </form>
+   </div>
+
+</div>
+  </div>
+  <div class="col" >
+<div class="card mh-65" >
+   <div class="card-body">
+     <div class="card-title">Analyze result</div>
+   <table class="hidden">
+       <thead><tr>
+           <th>User id</th>
+           <th>Ours</th>
+           <th>Winner</th>
+       </tr></thead>
+       <tbody></tbody>
+   </table>
+   </div>
+</div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block js_content %}
+<script type="text/javascript" src="{% static 'js/ours_api.js' %}"></script>
+{% endblock %}

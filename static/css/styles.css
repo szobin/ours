@@ -1,0 +1,15 @@
+﻿.mh-65 {
+  min-height: 65vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.fa-plus-circle {
+  color: green;
+}
+
+.fa-minus-circle {
+  color: red;
+}
