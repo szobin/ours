@@ -40,8 +40,8 @@ function callLogAPI() {
      log_text: log_text 
    }
    ).then(data => {
+      console.log(data);
       if (data.status == 0) {
-         console.log(data);
          const tableOpts = {
            paging: false,
            searching: false,
@@ -66,8 +66,13 @@ function callLogAPI() {
          }));
          tableData.draw();
          table.removeClass('hidden');
+      } else {
+         console.log(data.status, data.error);
       }
 
+   })
+   .catch((status, err) => {
+      console.log(status, err);
    });
 
 }

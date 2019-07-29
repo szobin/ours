@@ -1,0 +1,2 @@
+[Mon Jul 29 11:41:31.680117 2019] [wsgi:error] [pid 27097:tid 140213143111424] [remote 93.72.197.241:59790] Not Found: /static/js/bootstrap.min.js.map
+[Mon Jul 29 11:41:31.682951 2019] [wsgi:error] [pid 27098:tid 140213117933312] [remote 93.72.197.241:59791] Not Found: /static/css/bootstrap.min.css.map

@@ -32,7 +32,7 @@ def get_users(logs):
 
 def view_api_process_log(request):
     try:
-        rq = json.loads(request.body)
+        rq = json.loads(request.body.decode("utf-8"))
         log_text = rq.get("log_text")
         if log_text is None:
             raise Exception("wrong params")
