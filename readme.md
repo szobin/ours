@@ -1,8 +1,10 @@
 # Ours - simple log analyzer
 
 ## preparing
+```
 git clone https://gitlab.com/szobin/ours.git
 pip3 install -r requirements.txt
+```
 
 ## usage
 
