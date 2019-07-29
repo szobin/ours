@@ -32,6 +32,11 @@ function callLogAPI() {
    }
    table.addClass('hidden');
    if (!tableData) {
+     const tableOpts = {
+           paging: false,
+           searching: false,
+           info: false
+         }
      tableData = table.DataTable(tableOpts);
    }
 
@@ -42,12 +47,6 @@ function callLogAPI() {
    ).then(data => {
       console.log(data);
       if (data.status == 0) {
-         const tableOpts = {
-           paging: false,
-           searching: false,
-           info: false
-         }
-
          const user_ids = Object.keys(data.users);
          console.log(user_ids);
          tableData.clear()
@@ -69,7 +68,6 @@ function callLogAPI() {
       } else {
          console.log(data.status, data.error);
       }
-
    })
    .catch((status, err) => {
       console.log(status, err);
