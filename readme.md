@@ -2,7 +2,7 @@
 
 ## preparing
 ```
-git clone https://gitlab.com/szobin/ours.git
+git clone https://github.com/szobin/ours.git
 pip3 install -r requirements.txt
 ```
 
